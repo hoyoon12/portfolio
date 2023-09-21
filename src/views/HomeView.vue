@@ -3,15 +3,15 @@
     <div id="top">
       <swiper class="swiper" :slides-per-view="1" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
 
-        <swiper-slide style="background-image: url(/top1.jpg)" class="slide">
+        <swiper-slide style="background-image: url(/portfolio/top1.jpg)" class="slide">
           <div class="header">명지전문대 정보통신공학과 나호윤</div>
         </swiper-slide>
 
-        <swiper-slide style="background-image: url(/top2.jpg)" class="slide">
+        <swiper-slide style="background-image: url(/portfolio/top2.jpg)" class="slide">
           <div class="header">명지전문대 정보통신공학과 나호윤</div>
         </swiper-slide>
 
-        <swiper-slide style="background-image: url(/top3.jpg)" class="slide">
+        <swiper-slide style="background-image: url(/portfolio/top3.jpg)" class="slide">
           <div class="header">명지전문대 정보통신공학과 나호윤</div>
         </swiper-slide>
 
@@ -24,17 +24,22 @@
 
       <div class="list">
         <div class="item" @click="movePage('/portfolio1')" data-aos="zoom-out-down" data-aos-duration="3000"
-          style="background-image: url(/top1.jpg)">
+          style="background-image: url(/portfolio/top1.jpg)">
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000" style="background-image: url(/top1.jpg)">
+        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+          style="background-image: url(/portfolio/top1.jpg)">
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000" style="background-image: url(/top1.jpg)">
+        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+          style="background-image: url(/portfolio/top1.jpg)">
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000" style="background-image: url(/top1.jpg)">
+        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+          style="background-image: url(/portfolio/top1.jpg)">
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000" style="background-image: url(/top1.jpg)">
+        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+          style="background-image: url(/portfolio/top1.jpg)">
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000" style="background-image: url(/top1.jpg)">
+        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+          style="background-image: url(/portfolio/top1.jpg)">
         </div>
       </div>
     </div>
@@ -138,5 +143,4 @@ export default defineComponent({
     }
 
   }
-}
-</style>
+}</style>
