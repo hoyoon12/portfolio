@@ -12,7 +12,7 @@
         </swiper-slide>
 
         <swiper-slide style="background-image: url(/portfolio/top3.jpg)" class="slide">
-          <div class="header">명지전문대 정보통신공학과 나호윤</div>
+          <div class="header">명지전문대 정보통신공학과 나호윤윤</div>
         </swiper-slide>
 
       </swiper>
