@@ -1,6 +1,6 @@
 <template>
-  <v-app-bar app :color="appBarColor" elevation>
-          <v-toolbar-title>YoonTfolio</v-toolbar-title>
+  <v-app-bar id="title" app :color="appBarColor" elevation>
+          <v-toolbar-title @click="scrollTotitle">YoonTfolio</v-toolbar-title>
           <v-btn class="text4" @click="scrollToabout">ABOUT</v-btn>
           <v-btn class="text4" @click="scrollToPortfolio">PORTFOLIIO</v-btn>
           <v-btn class="text4" @click="scrollTocontact">CONTACT</v-btn>
@@ -49,7 +49,7 @@
       <div class="header">PORTFOLIO</div>
 
       <div class="list">
-        <div class="item" @click="movePage('/portfolio1')" data-aos="zoom-out-down" data-aos-duration="3000"
+        <div class="item" @click="moveToLink('/portfolio1')" data-aos="zoom-out-down" data-aos-duration="3000"
           style="background-image: url(/portfolio/main.png)">
           <div class="item-content">
                   <h3 class="item-title">Develop Site</h3>
@@ -58,7 +58,7 @@
                   </p>
                 </div>
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+        <div class="item" @click="moveToLink('/portfolio2')" data-aos="zoom-out-down" data-aos-duration="3000"
           style="background-image: url(/portfolio/pingpong.png)">
           <div class="item-content">
                     <h3 class="item-title">Pingpong</h3>
@@ -67,7 +67,7 @@
                     </p>
                   </div>
         </div>
-        <div class="item" data-aos="zoom-out-down" data-aos-duration="3000"
+        <div class="item" @click="moveToLink('/portfolio3')" data-aos="zoom-out-down" data-aos-duration="3000"
           style="background-image: url(/portfolio/busbus.jpg)">
           <div class="item-content">
                     <h3 class="item-title">장애인 버스 시스템</h3>
@@ -165,6 +165,27 @@ export default defineComponent({
 
   methods: {
 
+    moveToLink(project) {
+      const Links = {
+        '/portfolio1': 'https://github.com/bboggo/devfordev_ai',
+        '/portfolio2': 'https://www.notion.so/AIRFOOTBALL-098395471e7d4c04a663bdedfad7fec2',
+        '/portfolio3': 'https://www.notion.so/cc9420d8030d44b098024c97a2be6f02',
+      };
+
+      window.location.href = Links[project];
+    },
+
+    scrollTotitle() {
+      const titleSection = document.getElementById('title');
+      if (titleSection) {
+        window.scrollTo({
+          top: titleSection.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }
+    ,
+
       scrollToabout() {
         const aboutSection = document.getElementById('about');
         if (aboutSection) {
@@ -188,15 +209,14 @@ export default defineComponent({
     ,
     scrollTocontact() {
       const contactSection = document.getElementById('contact');
-      if (portfolioSection) {
+      if (contactSection) {
         window.scrollTo({
           top: contactSection.offsetTop,
           behavior: 'smooth',
         });
       }
-    }
-
-    ,
+    },
+    
 
     movePage(path) {
       this.$router.push(path);
@@ -225,17 +245,15 @@ export default defineComponent({
 }
 
 .image-container img {
-  max-width: 100%; /* 이미지의 최대 너비 설정 */
-  height: 600px; /* 이미지의 높이 자동 조절 */
+  max-width: 100%;  height: 600px; 
   border-radius: 10%;
 }
 .description {
   flex: 1;
-  text-align: left; /* 텍스트를 왼쪽으로 정렬 */
-  padding: 20px; /* 텍스트 주위의 공간 설정 */
-  margin-bottom: 7%;
-  font-family: Arial, sans-serif; /* 원하는 폰트 설정 */
-  font-size: 20px; /* 원하는 폰트 크기 설정 */
+  text-align: left; 
+  padding: 20px;   margin-bottom: 7%;
+  font-family: Arial, sans-serif; 
+  font-size: 20px; 
   line-height: 200%;
 }
 
@@ -250,7 +268,7 @@ export default defineComponent({
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* 원하는 배경색 또는 투명도 설정 */
+  background: rgba(0, 0, 0, 0.5); 
   z-index: -1;
 }
 
@@ -291,7 +309,7 @@ export default defineComponent({
       background-size: cover;
       aspect-ratio: 1/1;
       border-radius: 10%;
-      //비율 1:1 비율이 되도록
+
       &:hover {
         transform: scale(1.1);
 
